@@ -1,10 +1,5 @@
 package ru.siebel.order.service.controller;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
-
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RestController;
 import ru.siebel.order.api.OrderApi;
@@ -15,6 +10,8 @@ import ru.siebel.order.service.exception.InvalidContentException;
 import ru.siebel.order.service.exception.InvalidShippingException;
 import ru.siebel.order.service.mapper.OrderMapper;
 import ru.siebel.order.service.service.OrderService;
+
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -33,7 +30,7 @@ public class OrderController implements OrderApi {
         OrderEntity entity = new OrderEntity();
         entity.setContent(orderContent);
         for (ShippingEnum ship : ShippingEnum.values()) {
-            if (ship.getValue().equals(orderShipping)){
+            if (ship.getValue().equals(orderShipping)) {
                 entity.setShipping(orderShipping);
             }
         }

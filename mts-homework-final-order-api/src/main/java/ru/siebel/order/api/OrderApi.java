@@ -19,5 +19,5 @@ public interface OrderApi {
 
     @PostMapping({"/sendOrder"})
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    void sendOrder(@RequestParam String orderContent,@RequestParam String orderShipping);
+    void sendOrder(@RequestParam String orderContent, @RequestParam String orderShipping);
 }

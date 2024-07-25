@@ -1,6 +1,5 @@
 package ru.siebel.order.dto.enums;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 

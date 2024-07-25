@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import ru.siebel.order.dto.Order;
 
 import java.io.Serializable;
-import java.util.UUID;
 
 @Data
 @Builder
