@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: mts-homework-final-application-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/final_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+
+  jpa:
+    properties:
+      hibernate:
+        format_sql: false
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: create
+    show-sql: false
+  main:
+    allow-bean-definition-overriding: true
+
+server:
+  port: 9560
+  error:
+    include-message: always
