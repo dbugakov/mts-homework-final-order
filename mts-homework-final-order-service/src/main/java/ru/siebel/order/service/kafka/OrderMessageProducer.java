@@ -35,7 +35,7 @@ public class OrderMessageProducer {
                         .setHeader(MessageHeaders.CONTENT_TYPE, MimeTypeUtils.APPLICATION_JSON)
                         .build();
 
-        String bindingName = "consumeOrderMessage-in-0";
+        String bindingName = "final.order";
         streamBridge.send(bindingName, message);
     }
 }
